@@ -35,7 +35,7 @@ func New() *Reader {
 		stopCh: make(chan struct{}),
 		FakeUser: &UserData{
 			ID:            "000000000000000000",
-			Username:      "rmcord",
+			Username:      "hindsight",
 			Discriminator: "0000",
 		},
 	}
@@ -61,6 +61,7 @@ func (r *Reader) Start() error {
 		ln, err := createListener(i)
 		if err != nil {
 			log.Printf("could not create IPC listener %d: %v", i, err)
+			log.Printf("this may be due to discord being open")
 			continue
 		}
 

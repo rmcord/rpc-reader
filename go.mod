@@ -1,4 +1,4 @@
-module github.com/rmcord/discord-rpc-reader
+module github.com/hindsightchat/rpc-reader
 
 go 1.25.3
 
